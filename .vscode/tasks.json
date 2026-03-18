@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup OctoFit venv and install requirements",
+      "type": "shell",
+      "command": "python3 -m venv octofit-tracker/backend/venv && source octofit-tracker/backend/venv/bin/activate && pip install -r octofit-tracker/backend/requirements.txt",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Create React App",
+      "type": "shell",
+      "command": "npx create-react-app octofit-tracker/frontend --template cra-template --use-npm",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Install React dependencies",
+      "type": "shell",
+      "command": "npm install bootstrap --prefix octofit-tracker/frontend && npm install react-router-dom --prefix octofit-tracker/frontend",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Import Bootstrap CSS in index.js",
+      "type": "shell",
+      "command": "sed -i \"1iimport 'bootstrap/dist/css/bootstrap.min.css';\" octofit-tracker/frontend/src/index.js",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Copy OctoFit logo to public",
+      "type": "shell",
+      "command": "cp docs/octofitapp-small.png octofit-tracker/frontend/public/octofitapp-small.png && cp docs/octofitapp-small.png octofit-tracker/frontend/src/octofit-logo.png && echo 'Logo copied'",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
