@@ -1,0 +1,217 @@
+/* ================================================================
+   OctoFit Tracker – global styles
+   Palette:
+     GitHub-dark  #0d1117 / #161b22 / #21262d / #30363d
+     Accent blue  #58a6ff
+     Accent green #3fb950
+     Accent purple #bc8cff
+     Text light   #f0f6fc / #c9d1d9
+================================================================ */
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Reset / base ── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0f2f5 50%, #e8f0fe 100%);
+  background-attachment: fixed;
+  color: #1a1e2e;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0d1117;
+  font-weight: 700;
+}
+
+a {
+  color: #0969da;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0550ae;
+  text-decoration: underline;
+}
+
+/* ── Page wrapper ── */
+.octofit-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.octofit-page > .container {
+  flex: 1;
+}
+
+/* ── Navbar ── */
+.octofit-navbar {
+  background: linear-gradient(90deg, #0d1117 0%, #161b22 60%, #1c2128 100%) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  padding: 0.6rem 0;
+}
+
+.octofit-logo {
+  height: 38px;
+  width: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px #30363d;
+}
+
+.octofit-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #f0f6fc !important;
+  letter-spacing: 0.3px;
+  gap: 0.5rem;
+}
+
+.octofit-navbar .nav-link {
+  color: #8b949e !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.85rem !important;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #f0f6fc !important;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.octofit-navbar .nav-link.active {
+  color: #58a6ff !important;
+  background: rgba(88, 166, 255, 0.12);
+  font-weight: 600;
+}
+
+/* ── Cards ── */
+.octofit-card {
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, #0d1117 0%, #1c2128 100%);
+  color: #f0f6fc;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.octofit-card .card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  letter-spacing: 0.2px;
+}
+
+.octofit-card .card-header .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #30363d !important;
+  color: #8b949e;
+  padding: 0.35em 0.7em;
+  border-radius: 20px;
+}
+
+/* ── Tables ── */
+.octofit-table {
+  margin-bottom: 0;
+}
+
+.octofit-table thead th {
+  background-color: #f6f8fa;
+  color: #57606a;
+  border-bottom: 2px solid #d0d7de;
+  border-top: none;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 0.85rem 1.1rem;
+}
+
+.octofit-table tbody tr {
+  border-color: #f0f2f5;
+  transition: background 0.12s;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: #f6f8fa !important;
+}
+
+.octofit-table td {
+  vertical-align: middle;
+  font-size: 0.93rem;
+  padding: 0.75rem 1.1rem;
+  color: #1a1e2e;
+  border-color: #f0f2f5;
+}
+
+.octofit-table tbody tr:nth-of-type(even) {
+  background-color: #fafbfc;
+}
+
+/* ── Buttons ── */
+.btn-octofit-primary {
+  background: linear-gradient(135deg, #0969da 0%, #1a7f37 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.btn-octofit-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 3px 10px rgba(9, 105, 218, 0.35);
+  color: #fff;
+}
+
+/* ── Badges ── */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background-color: #21262d;
+  color: #58a6ff;
+  box-shadow: 0 0 0 2px #30363d;
+}
+
+/* ── Spinners ── */
+.spinner-border {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* ── Alerts ── */
+.alert-danger {
+  background-color: #fff0f0;
+  border-color: #ffcdd2;
+  color: #b71c1c;
+  border-radius: 8px;
+}
+
+/* ── Footer ── */
+.octofit-footer {
+  font-size: 0.8rem;
+  color: #6e7681;
+  background: #f6f8fa;
+  border-top: 1px solid #d0d7de;
+  padding: 0.9rem 0 !important;
+  margin-top: 2rem;
+}
